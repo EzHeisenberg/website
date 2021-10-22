@@ -1,0 +1,19 @@
+{
+  "name": "Projet",
+  "projets": [
+    {
+      "title": "Portfolio Photographes",
+      "description": "Créartion d'un portfolio pour une photographe, affichant des catégories d'image, puis ",
+      "language": ["symfony", "php", "html", "css", "js", "mysql"],
+      "url": "",
+      "pathImage": ["mjp-portfolio.jpg"]
+    },
+    {
+      "title": "ShopTitans Profit Calculator",
+      "description": "descProjet",
+      "language": ["vuejs", "js", "json", "html", "css"],
+      "url": "https://ezheisenberg.github.io/ShopTitansProfitCalculator/#/",
+      "pathImage": ["STPC/STPC.png", "STPC/STPC2.jpg", "STPC/STPC3.jpg"]
+    }
+  ]
+}

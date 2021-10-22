@@ -1,0 +1,189 @@
+// background color
+$dark-background: #1d1d1d
+$light-background: #ffffff
+
+$bg-avatar: #212121
+
+
+
+// Palette
+$bg-top: #72ddf7
+$bg-left: #6f89ff
+$bg-left-mid: #be8bff
+$bg-right-mid: #f9a2fa
+
+
+// background gradient
+$backgroun-gradiant-webkit: -webkit-linear-gradient(to right, $bg-left, $bg-left-mid, $bg-right-mid)
+$backgroun-gradiant: linear-gradient(to right, $bg-left, $bg-left-mid, $bg-right-mid)
+
+// fonts-size
+$size-title: 2.7rem
+$size-subtitle: 1.4rem
+$size-title-paragraphe: calc(1rem + 1.1vw)
+$size-paragraphe: 18px
+
+
+// fonts
+$font-title: 'BebasNeue'
+$font-subtitle: 'Pr'
+$font-title-paragraphe: 'eurostyleB', sans-serif
+$font-paragraphe: 'mk2', sans-serif
+
+
+$card-height-large-screen: 20rem
+$card-height-mobile: 12rem
+
+
+
+
+
+// Annimations
+
+
+@-webkit-keyframes title
+  0%
+    letter-spacing: 1em
+    -webkit-transform: translateZ(400px)
+    transform: translateZ(400px)
+    opacity: 0
+
+  40%
+    opacity: 0.6
+
+  100%
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    opacity: 1
+
+@keyframes title
+  0%
+    letter-spacing: 1em
+    -webkit-transform: translateZ(400px)
+    transform: translateZ(400px)
+    opacity: 0
+
+  40%
+    opacity: 0.6
+
+  100%
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    opacity: 1
+
+
+.dock-in
+  -webkit-animation: dock-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both
+  animation: dock-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both
+
+@-webkit-keyframes dock-in
+  0%
+    -webkit-transform: translateX(-1000px)
+    transform: translateX(-1000px)
+    opacity: 0
+
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes dock-in
+  0%
+    -webkit-transform: translateX(-1000px)
+    transform: translateX(-1000px)
+    opacity: 0
+
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+
+.dock-out
+  -webkit-animation: dock-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+  animation: dock-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+@-webkit-keyframes dock-out
+  0%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+  100%
+    -webkit-transform: translateX(1000px)
+    transform: translateX(1000px)
+    opacity: 0
+
+@keyframes dock-out
+  0%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+  100%
+    -webkit-transform: translateX(1000px)
+    transform: translateX(1000px)
+    opacity: 0
+
+
+.card-in
+  -webkit-animation: card-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s both
+  animation: card-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s both
+
+@-webkit-keyframes card-in
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+@keyframes card-in
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+
+
+.card-out
+  -webkit-animation: card-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+  animation: card-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+@-webkit-keyframes card-out
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+@keyframes card-out
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+
+
+
+
+
+
+
