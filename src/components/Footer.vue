@@ -2,20 +2,6 @@
 
 
   <footer class="container-wbg section footer">
-    <div class="columns center contact">
-      <div class="column">
-        <h2 class="title-paragraphe">Commencé un projet</h2>
-      </div>
-      <div class="column">
-        <p class="paragraphe">Si vous voulez me confier votre projet, prenons contact, je payerais le café</p>
-      </div>
-      <div class="column">
-        <a href="" class="link-style-contact">Contactez-moi</a>
-      </div>
-    </div>
-
-
-
     <div class="navigation-bar-social">
       <ul class="items-social" id="navbar-social">
         <li>
@@ -51,9 +37,7 @@
     <div class="footer-navigation">
       <ul>
         <li><a href="" class="link-style-2">À propos de moi</a></li>
-        <li><a href="" class="link-style-2">Faire un devis</a></li>
-        <li><a href="" class="link-style-2">Travailler ensemble</a></li>
-      </ul>
+        </ul>
     </div>
     <p class="center copyright">© 2021 <a href="" class="link-style-2">EzForeach</a></p>
   </footer>
@@ -85,7 +69,7 @@ export default {
 
 .paragraphe
   padding: 0
-  font-size: 15px
+  font-size: 16px
 
 .columns
   display: grid
@@ -104,6 +88,7 @@ export default {
   background: #1f1f1f
   text-align: center
   color: $light-background
+  box-shadow: 6px 6px 18px 0 #3b3b3b
   div
     padding-bottom: 20px
     margin: auto auto

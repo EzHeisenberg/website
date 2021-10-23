@@ -13,10 +13,10 @@
         <div>
           <div class="slideshow-container">
 
-            <div class="mySlides" v-for="(image, i) in pathImage" :key="i">
-              <div class="numbertext paragraphe">{{ i + 1 }} / {{ pathImage.length }}</div>
+            <div class="mySlides" v-for="(image, i) in images" :key="i">
+              <div class="numbertext paragraphe">{{ i + 1 }} / {{ images.length }}</div>
               <img :src="require(`@/assets/Projects/${image}`)">
-              <div class="text">{{ description }}</div>
+              <div class="text">{{ short_description }}</div>
             </div>
 
             <a class="prev" @click="plusSlides(-1)">&#10094;</a>
@@ -24,27 +24,42 @@
 
           </div>
           <div style="text-align:center">
-            <span class="dotSlide" v-for="(i,j) in pathImage" :key="i" @click="currentSlide(j)"></span>
+            <span class="dotSlide" v-for="(i,j) in images" :key="i" @click="currentSlide(j)"></span>
           </div>
         </div>
 
         <div>
           <div>
-            <p class="title-paragraphe">Langage</p>
+            <p class="title-paragraphe">Langages</p>
             <div class="grid-langage">
-              <p class="paragraphe" v-bind:key="index" v-for="(item, index) in language">{{ item }}</p>
+              <div v-for="item in languages" :key="item">
+                <img :alt="item" :src="require(`@/assets/Languages/${item}.png`)" height="50">
+              </div>
             </div>
           </div>
-        </div>
 
+          <div>
+            <p class="title-paragraphe">Description</p>
+            <p class="paragraphe">{{description}}</p>
+          </div>
+        </div>
       </div>
+
+      <div class="btn-website">
+        <a class="paragraphe" href="">
+          Voir le site
+        </a>
+      </div>
+
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 
 <script>
 import Projets from "@/files/Projets";
+import Footer from "./Footer";
 
 
 export default {
@@ -52,23 +67,30 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
+
       title: "",
+      short_description: "",
       description: "",
-      language: [],
+      languages: "",
       url: "",
-      pathImage: "",
+      images: "",
+      create_date: "",
+
       slideIndex: 1
     }
   },
-  components: {},
+  components: {Footer},
   methods: {
     getProjet(index) {
       const projet = Projets.projets[index];
+
       this.title = projet.title;
+      this.short_description = projet.short_description;
       this.description = projet.description;
-      this.language = projet.language;
+      this.languages = projet.languages;
       this.url = projet.url;
-      this.pathImage = projet.pathImage;
+      this.images = projet.images;
+      this.create_date = projet.create_date;
     },
 
 
@@ -237,24 +259,55 @@ export default {
 
 .title-paragraphe
   padding: 15px 0
+  text-align: start
+
+.paragraphe
+  padding: 0 15px
+
+
 
 .grid-langage
+  padding: 0 15px
   display: grid
   grid-template-columns: auto auto auto auto
   text-align: center
-  justify-content: center
+  justify-content: space-around
   grid-gap: 5px
 
 .grid-project
   display: grid
-  grid-template-columns: 55% 35%
+  grid-template-columns: 55% 40%
   justify-content: space-around
+
+
+.btn-website
+  display: flex
+  justify-content: center
+  padding: 60px 0
+  a
+    text-align: center
+    padding: 10px
+    width: 35vw
+    border: #000000 2px solid
+    border-radius: 15px
+    transition: .3s
+    color: black
+    &:hover
+      background-color: #000000
+      color: white
+
 
 
 @media screen and (max-width: 860px)
   .grid-project
     display: grid
     grid-template-columns: auto
+
+  .btn-website
+    a
+      width: 70vw
+
+
 
 @media screen and (max-width: 630px)
   .title

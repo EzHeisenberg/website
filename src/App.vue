@@ -123,7 +123,6 @@ a.link-style
     color: #80a0ff
 
 
-
 .hero
   display: inline-block
   width: 100%

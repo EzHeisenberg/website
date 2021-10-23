@@ -16,6 +16,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="card-project">
         <router-link to="/project/1" class="card-project-link"></router-link>
         <img src="../../assets/Projects/STPC/STPC.png" alt="" class="card-project-image">

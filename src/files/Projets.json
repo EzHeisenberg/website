@@ -3,17 +3,22 @@
   "projets": [
     {
       "title": "Portfolio Photographes",
-      "description": "Créartion d'un portfolio pour une photographe, affichant des catégories d'image, puis ",
-      "language": ["symfony", "php", "html", "css", "js", "mysql"],
+      "short_description": "Créartion d'un portfolio pour une photographe",
+      "description": "Création d'un portfolio pour la photographe Marie-Jeanne Fautres. Passionnée de photographie, Marie-Jeanne aimerait exposer ses créations sur un site web tout en ayant la possibilité de pouvoir gérer son contenu.",
+
+      "languages": ["symfony", "php", "html", "css", "js", "mysql"],
       "url": "",
-      "pathImage": ["mjp-portfolio.jpg"]
+      "images": ["mjp-portfolio.jpg"],
+      "create_date": "10 juin, 2021"
     },
     {
       "title": "ShopTitans Profit Calculator",
-      "description": "descProjet",
-      "language": ["vuejs", "js", "json", "html", "css"],
+      "short_description": "descProjet",
+      "description": "",
+      "languages": ["vuejs", "js", "html", "css"],
       "url": "https://ezheisenberg.github.io/ShopTitansProfitCalculator/#/",
-      "pathImage": ["STPC/STPC.png", "STPC/STPC2.jpg", "STPC/STPC3.jpg"]
+      "images": ["STPC/STPC.png", "STPC/STPC2.jpg", "STPC/STPC3.jpg"],
+      "create_date": "10 juin, 2021"
     }
   ]
 }
