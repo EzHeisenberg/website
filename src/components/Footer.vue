@@ -3,43 +3,43 @@
 
   <footer class="container-wbg section footer">
     <div class="navigation-bar-social">
-      <ul class="items-social" id="navbar-social">
+      <ul id="navbar-social" class="items-social">
         <li>
-          <a href="https://github.com/EzHeisenberg" target="_blank" id="github-social">
-            <img src="../assets/SocialNavigation/github.png" alt="Icon GitHub">
+          <a id="github-social" href="https://github.com/EzHeisenberg" target="_blank">
+            <img alt="Icon GitHub" src="../assets/SocialNavigation/github.png">
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/lucas-reteau/" target="_blank" id="linkedin-social">
-            <img src="../assets/SocialNavigation/linkedin.png" alt="Icon LinkedIn">
+          <a id="linkedin-social" href="https://www.linkedin.com/in/lucas-reteau/" target="_blank">
+            <img alt="Icon LinkedIn" src="../assets/SocialNavigation/linkedin.png">
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/heisen_dev/" target="_blank" id="instagram-social">
-            <img src="../assets/SocialNavigation/instagram.png" alt="Icon Instagram">
+          <a id="instagram-social" href="https://www.instagram.com/heisen_dev/" target="_blank">
+            <img alt="Icon Instagram" src="../assets/SocialNavigation/instagram.png">
           </a>
         </li>
         <li>
-          <a href="mailto:reteau.lucas-pro@outlook.fr" id="mail-social">
-            <img src="../assets/SocialNavigation/mail.png" alt="Icon Mail">
+          <a id="mail-social" href="mailto:reteau.lucas-pro@outlook.fr">
+            <img alt="Icon Mail" src="../assets/SocialNavigation/mail.png">
           </a>
         </li>
         <li>
-          <a href="" id="cv-social">
-            <img src="../assets/SocialNavigation/cv.png" alt="Icon CV">
+          <a id="cv-social" href="">
+            <img alt="Icon CV" src="../assets/SocialNavigation/cv.png">
           </a>
         </li>
       </ul>
     </div>
     <div class="logo-ez">
-      <img src="../assets/favicon-night.png" alt="" width="40">
+      <img alt="" src="../assets/favicon-night.png" width="40">
     </div>
     <div class="footer-navigation">
       <ul>
-        <li><a href="" class="link-style-2">À propos de moi</a></li>
-        </ul>
+        <li><a class="link-style-2" href="">À propos de moi</a></li>
+      </ul>
     </div>
-    <p class="center copyright">© 2021 <a href="" class="link-style-2">EzForeach</a></p>
+    <p class="center copyright">© 2021 <a class="link-style-2" href="">EzForeach</a></p>
   </footer>
 </template>
 
@@ -59,6 +59,7 @@ export default {
   border-radius: 15px
   color: #fff
   transition: 0.2s ease-in
+
   &:hover
     color: #000
     background: #ffb6fc
@@ -77,7 +78,6 @@ export default {
   align-self: center
 
 
-
 .column
   padding: 10px 20px
 
@@ -89,15 +89,16 @@ export default {
   text-align: center
   color: $light-background
   box-shadow: 6px 6px 18px 0 #3b3b3b
+
   div
     padding-bottom: 20px
     margin: auto auto
 
 
-
 a.link-style-2
   color: white
   transition: 0.3s ease-in
+
   &:hover
     color: #1d1d1d
 
@@ -106,10 +107,12 @@ a.link-style-2
   font-family: $font-title-paragraphe
   text-align: center
   padding-bottom: 10px
+
   ul
     margin: auto
     padding: 10px 0
     list-style-type: none
+
     li
       display: inline
       padding: 0 20px
@@ -122,9 +125,11 @@ a.link-style-2
     padding: 0
     list-style-type: none
     overflow: hidden
+
     li
       display: inline
       padding: 0 5px
+
       img
         height: calc(2vw + 30px)
         cursor: pointer
@@ -159,6 +164,7 @@ a.link-style-2
   .footer-navigation
     ul
       padding: 10px 0
+
       li
         padding: 0 5px
   .navigation-bar-social

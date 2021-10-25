@@ -2,32 +2,17 @@
   <section class="section container">
     <p class="title-paragraphe">Projets à l'affiche</p>
     <div class="content-wrapper">
-      <div class="card-project">
-        <router-link to="/project/0" class="card-project-link"></router-link>
-        <img src="../../assets/Projects/mjp-portfolio.jpg" alt="" class="card-project-image">
+      <div class="card-project" v-for="(projet, i) in projets" :key="i">
+        <router-link :to="`/project/${i}`" class="card-project-link"></router-link>
+        <img :src="require(`@/assets/Projects/${projet.images[0]}`)" alt="" class="card-project-image">
         <div class="card-project-text-wrapper">
-          <h2 class="card-project-title">Portfolio photographe</h2>
-          <div class="card-project-date">10 juin, 2021</div>
+          <h2 class="card-project-title">{{ projet.title }}</h2>
+          <div class="card-project-date">{{ projet.create_date}}</div>
           <div class="card-project-details">
             <p class="card-project-excerpt">
-              Création d'un portfolio pour une photographe passionée.
+              {{ projet.short_description }}
             </p>
-            <a href="#" class="card-project-more">Afficher plus</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card-project">
-        <router-link to="/project/1" class="card-project-link"></router-link>
-        <img src="../../assets/Projects/STPC/STPC.png" alt="" class="card-project-image">
-        <div class="card-project-text-wrapper">
-          <h2 class="card-project-title">ShopTitans Profit Calculator</h2>
-          <div class="card-project-date">20 février, 2019</div>
-          <div class="card-project-details">
-            <p class="card-project-excerpt">
-              Calculateur de bénéfice sur le jeu mobile "Shop Titans". Il permet de voir le gain d’expérience et le nombre de matériaux à utiliser.              </p>
-            <a href="#" class="card-project-more">Afficher plus</a>
+            <router-link :to="`/project/${i}`" class="card-project-more">Afficher plus</router-link>
           </div>
         </div>
       </div>
@@ -36,23 +21,31 @@
 </template>
 
 <script>
+import Projets from "@/files/Projets";
+
 export default {
-  name: "Projets"
+  name: "Projets",
+  data() {
+    return {
+      projets: []
+    }
+  },
+  methods: {
+    getProjet() {
+      this.projets = Projets.projets;
+    },
+  },
+
+  created: function () {
+    this.getProjet()
+  },
+
 }
 </script>
 
 <style lang="sass" scoped>
 
-.content-wrapper
-  margin: 0 auto
-  max-width: 1200px
-  display: flex
-  flex-flow: row wrap
-  justify-content: center
-  padding: 0.5rem
-
 .card-project
-  border: 0 solid aqua
   margin: 0.5rem
   position: relative
   height: $card-height-large-screen
@@ -66,6 +59,7 @@ export default {
   -moz-backface-visibility: hidden
   -webkit-transform: translate3d(0, 0, 0)
   -moz-transform: translate3d(0, 0, 0)
+
   &::before
     content: ''
     position: absolute
@@ -158,6 +152,7 @@ export default {
     position: relative
     z-index: 5
     transition: 300ms ease-in-out
+
     &:hover
       color: $bg-left-mid
 

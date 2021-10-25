@@ -9,18 +9,6 @@
   </div>
 </template>
 
-
-<style lang="sass" scoped>
-</style>
-
-
-
-
-
-
-
-
-
 <script>
 import Hero from "@/components/Home/Hero";
 import Paragraphe from "@/components/Home/Paragraphe";

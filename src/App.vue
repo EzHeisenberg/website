@@ -87,7 +87,7 @@ body
   font-family: $font-title-paragraphe
   font-size: $size-title-paragraphe
   letter-spacing: 1px
-  text-align: center
+
 
 .paragraphe
   font-family: $font-paragraphe
@@ -150,6 +150,13 @@ a.link-style
 
 
 
+.content-wrapper
+  margin: 0 auto
+  max-width: 1200px
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  padding: 0.5rem
 
 
 /*

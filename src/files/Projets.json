@@ -5,7 +5,6 @@
       "title": "Portfolio Photographes",
       "short_description": "Créartion d'un portfolio pour une photographe",
       "description": "Création d'un portfolio pour la photographe Marie-Jeanne Fautres. Passionnée de photographie, Marie-Jeanne aimerait exposer ses créations sur un site web tout en ayant la possibilité de pouvoir gérer son contenu.",
-
       "languages": ["symfony", "php", "html", "css", "js", "mysql"],
       "url": "",
       "images": ["mjp-portfolio.jpg"],
@@ -13,7 +12,7 @@
     },
     {
       "title": "ShopTitans Profit Calculator",
-      "short_description": "descProjet",
+      "short_description": "Calculateur de profit sur le jeu mobile Shop Titans",
       "description": "",
       "languages": ["vuejs", "js", "html", "css"],
       "url": "https://ezheisenberg.github.io/ShopTitansProfitCalculator/#/",

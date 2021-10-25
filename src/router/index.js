@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import NotFound from '../components/notFound.vue'
 import Portfolio from "@/views/Portfolio";
-import Project from "@/components/Project";
+import Project from "@/views/Project";
 import Profil from "@/views/Profil";
 
 

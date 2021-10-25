@@ -23,7 +23,8 @@
             <a class="next" @click="plusSlides(1)">&#10095;</a>
 
           </div>
-          <div style="text-align:center">
+
+          <div class="center">
             <span class="dotSlide" v-for="(i,j) in images" :key="i" @click="currentSlide(j)"></span>
           </div>
         </div>
