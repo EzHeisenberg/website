@@ -15,7 +15,7 @@
 
             <div class="mySlides" v-for="(image, i) in images" :key="i">
               <div class="numbertext paragraphe">{{ i + 1 }} / {{ images.length }}</div>
-              <img :src="require(`@/assets/Projects/${image}`)">
+              <img :src="require(`@/assets/Projects/${image}`)" :alt="image">
               <div class="text">{{ short_description }}</div>
             </div>
 
@@ -38,28 +38,26 @@
             </div>
           </div>
 
-          <div>
+          <div class="border-top">
+
             <p class="title-paragraphe">Description</p>
-            <p class="paragraphe">{{description}}</p>
+            <p class="paragraphe">{{ description }}</p>
           </div>
         </div>
       </div>
 
       <div class="btn-website">
-        <a class="paragraphe" href="">
-          Voir le site
-        </a>
+        <a class="paragraphe" target="_blank" :href="url">Voir le site</a>
       </div>
 
+
     </div>
-    <Footer></Footer>
   </div>
 </template>
 
 
 <script>
 import Projets from "@/files/Projets";
-import Footer from "./Footer";
 
 
 export default {
@@ -79,7 +77,7 @@ export default {
       slideIndex: 1
     }
   },
-  components: {Footer},
+  components: {},
   methods: {
     getProjet(index) {
       const projet = Projets.projets[index];
@@ -149,11 +147,11 @@ export default {
 
 .mySlides
   display: none
-
   img
     height: auto
     width: 100%
     border-radius: 10px
+
 
 
 /* Next & previous buttons
@@ -209,9 +207,9 @@ export default {
 
 .numbertext
   color: #f2f2f2
-  padding: 8px 12px
   position: absolute
-  top: 0
+  top: 15px
+  left: 5px
 
 /* The dots/bullets/indicators
 
@@ -219,7 +217,7 @@ export default {
   cursor: pointer
   height: 10px
   width: 10px
-  margin: 0 2px
+  margin: 5px 10px
   background-color: #dcdcdc
   border-radius: 50%
   display: inline-block
@@ -227,28 +225,6 @@ export default {
 
 .active, .dotSlide:hover
   background-color: #e69eee
-
-/* Fading animation
-
-.fade
-  -webkit-animation-name: fade
-  -webkit-animation-duration: 1.5s
-  animation-name: fade
-  animation-duration: 1.5s
-
-@-webkit-keyframes fade
-  from
-    opacity: .4
-
-  to
-    opacity: 1
-
-@keyframes fade
-  from
-    opacity: .4
-
-  to
-    opacity: 1
 
 
 .diagonal-hero-bg
@@ -265,9 +241,8 @@ export default {
   padding: 0 15px
 
 
-
 .grid-langage
-  padding: 0 15px
+  padding: 15px 10px
   display: grid
   grid-template-columns: auto auto auto auto
   text-align: center
@@ -284,6 +259,7 @@ export default {
   display: flex
   justify-content: center
   padding: 60px 0
+
   a
     text-align: center
     padding: 10px
@@ -292,10 +268,10 @@ export default {
     border-radius: 15px
     transition: .3s
     color: black
+
     &:hover
       background-color: #000000
       color: white
-
 
 
 @media screen and (max-width: 860px)
@@ -303,10 +279,16 @@ export default {
     display: grid
     grid-template-columns: auto
 
+  .container
+    padding: 0 60px
+
+  .border-top
+    padding: 20px 0
+    border-top: 1px solid #dadada
+
   .btn-website
     a
       width: 70vw
-
 
 
 @media screen and (max-width: 630px)
